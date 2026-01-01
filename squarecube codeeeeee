@@ -1,0 +1,30 @@
+package avinash;
+
+public class squarecube {
+
+    public static double square(double num) {
+        return num * num;
+    }
+
+    public static double cube(double num) {
+        return num * num * num;
+    }
+}
+--------------------------------------------
+package avinash;
+
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+public class ssquarecubetest {
+
+    @Test
+    public void testSquare() {
+        assertEquals(6.25, squarecube.square(2.5), 0.01);
+    }
+
+    @Test
+    public void testCube() {
+        assertEquals(15.625, squarecube.cube(2.5), 0.01);
+    }
+}
