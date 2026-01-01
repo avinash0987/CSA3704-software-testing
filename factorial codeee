@@ -1,0 +1,38 @@
+package avinash;
+
+public class factorial {
+
+    public static int factorial(int n) {
+        int fact = 1;
+        for (int i = 1; i <= n; i++) {
+            fact = fact * i;
+        }
+        return fact;
+    }
+}
+
+------------------------------------------
+package avinash;
+
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+public class FactorialTest {
+
+    @Test
+    public void testFactorialOfFive() {
+        assertEquals(120, factorial.factorial(5));
+    }
+
+    @Test
+    
+    public void testFactorialOfZero() {
+        assertEquals(1, factorial.factorial(0));
+    }
+
+    @Test
+    public void testFactorialOfThree() {
+        assertEquals(6, factorial.factorial(3));
+    }
+}
+
