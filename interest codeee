@@ -1,0 +1,36 @@
+package avinash;
+public class interest {
+
+    public static float calculateSI(float principal, float time, int age) {
+
+        float rate;
+
+        if (age >= 60) {
+            rate = 12;   
+        } else {
+            rate = 10;   
+        }
+
+        return (principal * time * rate) / 100;
+    }
+}
+------------------------------------------------------------------------------
+package avinash;
+
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+public class interesttest {
+
+    @Test
+    public void testSeniorCitizenInterest() {
+        assertEquals(2400.0f, interest.calculateSI(10000, 2, 65), 0.01);
+    }
+
+    @Test
+    public void testNormalCustomerInterest() {
+        assertEquals(1500.0f, interest.calculateSI(5000, 3, 30), 0.01);
+    }
+}
+
+
