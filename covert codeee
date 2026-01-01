@@ -1,0 +1,23 @@
+package avinash;
+
+import static org.junit.Assert.assertTrue;
+
+class Convert
+{
+    public static void main(String[] args)
+    {
+        int decimal1 = 14;
+        assertTrue(Integer.toBinaryString(decimal1).equals("1110"));
+        assertTrue(Integer.toOctalString(decimal1).equals("16"));
+
+        int decimal2 = 10;
+        assertTrue(Integer.toBinaryString(decimal2).equals("1010"));
+        assertTrue(Integer.toOctalString(decimal2).equals("12"));
+
+        int decimal3 = 7;
+        assertTrue(Integer.toBinaryString(decimal3).equals("111"));
+        assertTrue(Integer.toOctalString(decimal3).equals("7"));
+
+        System.out.println("All test cases passed successfully!");
+    }
+}
