@@ -1,0 +1,34 @@
+package avinash;
+
+public class voting {
+
+    public static boolean isEligible(int age) {
+        if (age >= 18) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
+----------------------------------
+package avinash;
+
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+public class votingtest {
+
+    @Test
+    public void testEligibleVoter() {
+        assertEquals(true, voting.isEligible(20));
+    }
+
+    @Test
+    public void testNotEligibleVoter() {
+        assertEquals(false, voting.isEligible(16));
+    }
+
+   
+    
+}
