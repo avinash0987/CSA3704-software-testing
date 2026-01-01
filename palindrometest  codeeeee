@@ -1,0 +1,28 @@
+
+package avinash ;
+
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+public class palindrometest {
+
+    public static String reverse(String str) {
+        String rev = "";
+        for (int i = str.length() - 1; i >= 0; i--) {
+            rev = rev + str.charAt(i);
+        }
+        return rev;
+    }
+
+    @Test
+    public void testReverseMani() {
+        String actual = reverse("mani");
+        assertEquals("inam", actual);
+    }
+
+    @Test
+    public void testReverseAmar() {
+        String actual = reverse("Amar");
+        assertEquals("rmA", actual);
+    }
+}
