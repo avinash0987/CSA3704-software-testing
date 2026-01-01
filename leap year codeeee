@@ -1,0 +1,56 @@
+package avinash;
+
+
+public class leapyear {
+
+    public static boolean isLeap(int year) {
+        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static int getDays(int year) {
+        if (isLeap(year)) {
+            return 366;
+        } else {
+            return 365;
+        }
+    }
+
+    public static int getMonths() {
+        return 12;
+    }
+
+    public static int getWeeks(int year) {
+        return getDays(year) / 7;
+    }
+}
+
+------------------------------------------------------
+
+
+package avinash;
+
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+public class Leap{
+
+    @Test
+    public void testLeapYear() {
+        assertEquals(true, leapyear.isLeap(2024));
+    }
+
+    @Test
+    public void testNonLeapYear() {
+        assertEquals(false, leapyear.isLeap(2023));
+    }
+}
+
+
+
+
+
+---------------
